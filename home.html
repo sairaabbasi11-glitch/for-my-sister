@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home — A little book for my sister</title>
+  <script>try{if(sessionStorage.getItem("loggedIn")!=="yes")location.replace("index.html")}catch(e){location.replace("index.html")}</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="home.html">For <span class="sister-name">Sister</span></a>
+      <ul class="nav-links">
+        <li><a href="home.html" data-page="home">Home</a></li>
+        <li><a href="quotes.html" data-page="quotes">Quotes</a></li>
+        <li><a href="memories.html" data-page="memories">Memories</a></li>
+        <li><a href="gallery.html" data-page="gallery">Gallery</a></li>
+        <li><a href="letter.html" data-page="letter">A letter</a></li>
+      </ul>
+      <button class="logout" id="logout" type="button">Log out</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Dear <span class="sister-name">Sister</span>, this book is all yours</h1>
+        <p>Inside are the things I never say out loud often enough: our silliest memories, a few words I wrote for you, some drawings, and a letter at the end.</p>
+        <a class="btn" href="memories.html">Start with our memories</a>
+      </div>
+
+      <figure class="polaroid" style="--tilt:2deg">
+        <svg viewBox="0 0 400 320" role="img" aria-label="Drawing of two sisters holding hands under the sun">
+          <rect width="400" height="320" fill="#9cc9f0"/>
+          <circle cx="330" cy="70" r="36" fill="#f2c14e"/>
+          <ellipse cx="200" cy="350" rx="280" ry="110" fill="#7bc8a4"/>
+          <!-- big sister -->
+          <path d="M100 150 q0-48 40-48 q40 0 40 48 v60 h-80z" fill="#2e2a4f"/>
+          <circle cx="140" cy="148" r="26" fill="#f0c6a0"/>
+          <path d="M112 146 q2-32 28-32 q26 0 28 32 q-20-18-56 0z" fill="#2e2a4f"/>
+          <circle cx="131" cy="150" r="3" fill="#2e2a4f"/><circle cx="149" cy="150" r="3" fill="#2e2a4f"/>
+          <path d="M132 160 q8 7 16 0" stroke="#2e2a4f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M140 176 l-44 100 h88z" fill="#f49ac1"/>
+          <rect x="122" y="276" width="9" height="28" fill="#f0c6a0"/><rect x="149" y="276" width="9" height="28" fill="#f0c6a0"/>
+          <!-- little sister -->
+          <path d="M238 196 q0-36 30-36 q30 0 30 36 v34 h-60z" fill="#5a3d2b"/>
+          <circle cx="268" cy="192" r="21" fill="#f0c6a0"/>
+          <path d="M246 190 q2-26 22-26 q20 0 22 26 q-16-14-44 0z" fill="#5a3d2b"/>
+          <circle cx="261" cy="194" r="2.6" fill="#2e2a4f"/><circle cx="275" cy="194" r="2.6" fill="#2e2a4f"/>
+          <path d="M262 202 q6 6 12 0" stroke="#2e2a4f" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M268 214 l-34 72 h68z" fill="#f2c14e"/>
+          <rect x="254" y="286" width="8" height="20" fill="#f0c6a0"/><rect x="274" y="286" width="8" height="20" fill="#f0c6a0"/>
+          <!-- holding hands -->
+          <path d="M168 220 q40 18 76 10" stroke="#f0c6a0" stroke-width="9" fill="none" stroke-linecap="round"/>
+          <!-- hearts -->
+          <path d="M205 120 c-8-12-26-6-20 8 l20 18 l20-18 c6-14-12-20-20-8z" fill="#f49ac1"/>
+          <path d="M236 92 c-5-7-15-3-12 5 l12 11 l12-11 c3-8-7-12-12-5z" fill="#f49ac1"/>
+        </svg>
+        <figcaption>Always side by side</figcaption>
+      </figure>
+    </section>
+
+    <h2>Open a page</h2>
+    <nav class="section-links" aria-label="Sections">
+      <a class="section-link" href="memories.html" style="--accent:#f49ac1">
+        <strong>Our memories</strong>
+        <span>Paper boats, kite fights, and midnight secrets.</span>
+      </a>
+      <a class="section-link" href="quotes.html" style="--accent:#f2c14e">
+        <strong>Words for you</strong>
+        <span>Little notes I wrote just for you.</span>
+      </a>
+      <a class="section-link" href="gallery.html" style="--accent:#7bc8a4">
+        <strong>Drawings</strong>
+        <span>Our childhood, drawn as pictures.</span>
+      </a>
+      <a class="section-link" href="letter.html" style="--accent:#9cc9f0">
+        <strong>A letter</strong>
+        <span>Read this one last.</span>
+      </a>
+    </nav>
+
+    <section class="quote-of-day" aria-live="polite">
+      <h2>A note for today</h2>
+      <p id="quote-text"></p>
+      <button class="btn" id="new-quote" type="button">Show another note</button>
+    </section>
+  </main>
+
+  <footer>
+    <nav aria-label="Footer">
+      <a href="home.html">Home</a>
+      <a href="quotes.html">Quotes</a>
+      <a href="memories.html">Memories</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="letter.html">A letter</a>
+    </nav>
+    <small>Made with love for <span class="sister-name">Sister</span></small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
